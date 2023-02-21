@@ -7,7 +7,8 @@
   "extends": [
     "airbnb",
     "prettier",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:i18next/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -21,9 +22,13 @@
     "react",
     "prettier",
     "react-hooks",
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "i18next"
   ],
   "rules": {
+    "i18next/no-literal-string": ["error", {
+      "markupOnly": true
+    }],
     "radix": 0,
     "react/no-array-index-key": "warn",
     "camelcase": "off",
