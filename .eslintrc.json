@@ -28,7 +28,7 @@
   "rules": {
     "i18next/no-literal-string": ["error", {
       "markupOnly": true,
-      "ignoreAttribute": ["data-testid"]
+      "ignoreAttribute": ["data-testid", "to"]
     }],
     "radix": 0,
     "react/no-array-index-key": "warn",
