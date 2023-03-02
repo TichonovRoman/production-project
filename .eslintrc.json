@@ -103,6 +103,7 @@
         "unnamedComponents": "arrow-function"
       }
     ],
+    "linebreak-style": 0,
     "no-nested-ternary": "warn",
     "no-unused-expressions": ["warn", { "allowShortCircuit": true }],
     "import/extensions": "off",
