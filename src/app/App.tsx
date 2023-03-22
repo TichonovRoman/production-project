@@ -16,7 +16,8 @@ const App = () => {
     <div className={classNames('app', {}, [theme])}>
       <Suspense fallback="">
         <Navbar />
-        <Modal />
+        <button onClick={() => setIsOpen(true)}>toggle</button>
+        <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}><div>dfjgldlfhglfhgdfh</div></Modal>
         <div className="content-page">
           <Sidebar />
           <AppRouter />
