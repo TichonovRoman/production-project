@@ -8,7 +8,8 @@
     "airbnb",
     "prettier",
     "plugin:react/recommended",
-    "plugin:i18next/recommended"
+    "plugin:i18next/recommended",
+    "plugin:react-hooks/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -23,7 +24,8 @@
     "prettier",
     "react-hooks",
     "@typescript-eslint",
-    "i18next"
+    "i18next",
+    "react-hooks"
   ],
   "rules": {
     "i18next/no-literal-string": ["error", {
@@ -143,7 +145,9 @@
         "optionalDependencies": true,
         "peerDependencies": true
       }
-    ]
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error"
   },
   "globals": {
     "__IS_DEV__": true
