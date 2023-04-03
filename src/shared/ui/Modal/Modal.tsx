@@ -2,6 +2,7 @@ import cls from "./Modal.module.scss"
 import {classNames} from "shared/lib/classNames/classNames";
 import React, {MouseEvent, useCallback, useEffect, useRef, useState} from "react";
 import {Portal} from "shared/ui/Portal/Portal";
+import {useTheme} from "app/providers/ThemeProvider";
 
 interface ModalPropsType {
     className?: string,
@@ -15,7 +16,8 @@ const ANIMATION_DELAY = 300
 export const Modal = ({className, children, isOpen, onClose}: ModalPropsType) => {
 
     const [isClosing, setIsClosing] = useState(false);
-    const timerRef = useRef<ReturnType<typeof setTimeout>>()
+    const timerRef = useRef<ReturnType<typeof setTimeout>>();
+    const {theme} = useTheme();
 
 
     const onCloseHandler = useCallback(() => {
@@ -36,7 +38,8 @@ export const Modal = ({className, children, isOpen, onClose}: ModalPropsType) =>
 
     const mods: Record<string, boolean> = {
         [cls.opened]: isOpen,
-        [cls.isClosing]: isClosing
+        [cls.isClosing]: isClosing,
+        [cls[theme]]: true
     }
 
     useEffect(() => {
