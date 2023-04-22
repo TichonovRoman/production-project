@@ -8,7 +8,8 @@
     "airbnb",
     "prettier",
     "plugin:react/recommended",
-    "plugin:i18next/recommended"
+    "plugin:i18next/recommended",
+    "plugin:react-hooks/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -23,11 +24,13 @@
     "prettier",
     "react-hooks",
     "@typescript-eslint",
-    "i18next"
+    "i18next",
+    "react-hooks"
   ],
   "rules": {
     "i18next/no-literal-string": ["error", {
-      "markupOnly": true
+      "markupOnly": true,
+      "ignoreAttribute": ["data-testid", "to"]
     }],
     "radix": 0,
     "react/no-array-index-key": "warn",
@@ -102,6 +105,7 @@
         "unnamedComponents": "arrow-function"
       }
     ],
+    "linebreak-style": 0,
     "no-nested-ternary": "warn",
     "no-unused-expressions": ["warn", { "allowShortCircuit": true }],
     "import/extensions": "off",
@@ -141,11 +145,20 @@
         "optionalDependencies": true,
         "peerDependencies": true
       }
-    ]
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error"
   },
   "globals": {
     "__IS_DEV__": true
   },
+  "overrides": [{
+    "files": ["**/src/**/*.test.{ts,tsx}"],
+    "rules": {
+      "i18next/no-literal-string": "off"
+
+    }
+  }],
   "settings": {
     "import/resolver": {
       "node": {
