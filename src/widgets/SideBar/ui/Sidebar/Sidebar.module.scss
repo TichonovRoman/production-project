@@ -34,7 +34,6 @@
 .item {
     margin-top: 10px;
     display: flex;
-    height: 30px;
     align-items: center;
 }
 
@@ -61,6 +60,7 @@
 
     .link {
         opacity: 0;
+        transition: 0.2s opacity;
         width: 0;
     }
 }
