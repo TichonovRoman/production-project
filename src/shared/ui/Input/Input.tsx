@@ -4,7 +4,6 @@ import React, {
 } from 'react';
 import cls from './Input.module.scss';
 
-// исключаем пропсы которые уже есть по умолчанию, что бы тс не ругался
 type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>
 
 interface InputProps extends HTMLInputProps {

@@ -32,6 +32,7 @@
       "markupOnly": true,
       "ignoreAttribute": ["data-testid", "to"]
     }],
+    "indent": "off",
     "radix": 0,
     "react/no-array-index-key": "warn",
     "camelcase": "off",
