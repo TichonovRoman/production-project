@@ -10,7 +10,6 @@ export interface ArticleBlockBase {
     type: ArticleBlockType
 }
 
-
 export interface ArticleCodeBlock extends ArticleBlockBase {
     type: ArticleBlockType.CODE;
     code: string;
