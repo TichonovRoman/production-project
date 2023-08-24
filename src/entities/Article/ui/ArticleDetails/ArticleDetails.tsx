@@ -14,6 +14,7 @@ import {
 } from "../../model/selectors/articleDetails";
 import {TextAlign, Text} from "shared/ui/Text/Text";
 import {Skeleton} from "shared/ui/Skeleton/Skeleton";
+import {Avatar} from "shared/ui/Avatar/Avatar";
 
 interface ArticleDetailsPropsType {
     className?: string;
@@ -28,8 +29,7 @@ export const ArticleDetails = memo(({className, id}: ArticleDetailsPropsType) =>
     const {t} = useTranslation();
     const dispatch = useAppDispatch();
 
-    // const isLoading = useSelector(getArticleDetailsIsLoading);
-    const isLoading = true;
+    const isLoading = useSelector(getArticleDetailsIsLoading);
     const article = useSelector(getArticleDetailsData);
     const error = useSelector(getArticleDetailsError);
 
@@ -41,13 +41,13 @@ export const ArticleDetails = memo(({className, id}: ArticleDetailsPropsType) =>
 
     if(isLoading) {
         content = (
-            <div>
+            <>
                 <Skeleton className={cls.avatar} width={200} height={200} border="50%" />
                 <Skeleton className={cls.title} width={300} height={32} />
                 <Skeleton className={cls.skeleton} width={600} height={24} />
                 <Skeleton className={cls.skeleton} width="100%" height={200} />
                 <Skeleton className={cls.skeleton} width="100%" height={200} />
-            </div>
+            </>
         )
     } else if(error) {
         content = (
@@ -57,7 +57,10 @@ export const ArticleDetails = memo(({className, id}: ArticleDetailsPropsType) =>
         )
     } else {
         content = (
-            <div>ArticleDetails</div>
+            <>
+                <Avatar size={200} src={article?.img} className={cls.avatar}/>
+                <Text title={article?.title} text={article?.subtitle}/>
+            </>
         )
     }
 
