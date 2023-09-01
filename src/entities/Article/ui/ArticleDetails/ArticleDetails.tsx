@@ -3,7 +3,7 @@ import {classNames} from "shared/lib/classNames/classNames";
 import {useTranslation} from "react-i18next";
 import {DynamicModuleLoader, ReducersList} from "shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
 import {articleDetailsReducer} from "../../model/slice/articleDetailsSlice";
-import {memo, useEffect} from "react";
+import {memo, useCallback, useEffect} from "react";
 import {useAppDispatch} from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 import {fetchArticleById} from "../../model/services/fetchArticleById/fetchArticleById";
 import {useSelector} from "react-redux";
@@ -18,6 +18,11 @@ import {Avatar} from "shared/ui/Avatar/Avatar";
 
 import EyeIcon from "shared/assets/icons/eye.svg";
 import CalendarIcon from "shared/assets/icons/CalendarIcon.svg";
+import {Icon} from "shared/ui/Icon/Icon";
+import {ArticleBlock, ArticleBlockType} from "../../model/types/article";
+import {ArticleCodeBlockComponent} from "entities/Article/ui/ArticleCodeBlockComponent/ArticleCodeBlockComponent";
+import {ArticleImageBlockComponent} from "entities/Article/ui/ArticleImageBlockComponent/ArticleImageBlockComponent";
+import {ArticleTextBlockComponent} from "entities/Article/ui/ArticleTextBlockComponent/ArticleTextBlockComponent";
 
 interface ArticleDetailsPropsType {
     className?: string;
@@ -35,6 +40,19 @@ export const ArticleDetails = memo(({className, id}: ArticleDetailsPropsType) =>
     const isLoading = useSelector(getArticleDetailsIsLoading);
     const article = useSelector(getArticleDetailsData);
     const error = useSelector(getArticleDetailsError);
+
+    const renderBlock = useCallback((block: ArticleBlock) => {
+        switch (block.type) {
+            case ArticleBlockType.CODE:
+                return <ArticleCodeBlockComponent/>;
+                case ArticleBlockType.IMAGE:
+                return <ArticleImageBlockComponent/>;
+                case ArticleBlockType.TEXT:
+                return <ArticleTextBlockComponent/>;
+            default: return null;
+
+        }
+    }, [])
 
     useEffect(() => {
         dispatch(fetchArticleById(id))
@@ -72,13 +90,17 @@ export const ArticleDetails = memo(({className, id}: ArticleDetailsPropsType) =>
                     size={TextSize.L}
                 />
                 <div className={cls.articleInfo}>
-                    <EyeIcon/>
+                    <Icon className={cls.icon} Svg={EyeIcon}/>
                     <Text text={String(article?.views)}/>
                 </div>
                 <div className={cls.articleInfo}>
-                    <CalendarIcon/>
+                    <Icon className={cls.icon} Svg={CalendarIcon}/>
                     <Text text={article?.createdAt}/>
                 </div>
+                <>
+                    {article?.blocks.map(renderBlock)}
+                </>
+
             </>
         )
     }
