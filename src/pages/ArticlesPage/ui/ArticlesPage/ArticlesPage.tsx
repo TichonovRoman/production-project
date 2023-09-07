@@ -11,7 +11,6 @@ const ArticlesPage = ({className}: ArticlesPagePropsType) => {
     const {t} = useTranslation();
     return (
         <div className={classNames(cls.ArticlesPage, {}, [className])}>
-            ARTICLES PAGE
         </div>
     );
 };
