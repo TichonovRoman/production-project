@@ -112,7 +112,7 @@
       "id": "1",
       "text": "some comment 1",
       "articleId": "1",
-      "userId": "1"
+      "userId": "2"
     },
     {
       "id": "2",
@@ -125,6 +125,18 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "fvfvdfv",
+      "id": "pUh0-xg"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "vxbvbvb",
+      "id": "pJDBqAm"
     }
   ],
   "users": [
@@ -143,14 +155,28 @@
       "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png?20141107110902"
     }
   ],
-  "profile": {
-    "first": "Роман",
-    "lastname": "Тихонов",
-    "age": 15,
-    "currency": "USD",
-    "country": "Russia",
-    "city": "Казань",
-    "username": "admin213",
-    "avatar": "https://cdn.icon-icons.com/icons2/2859/PNG/512/avatar_face_man_boy_profile_smiley_happy_people_icon_181659.png"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Роман",
+      "lastname": "Тихонов",
+      "age": 15,
+      "currency": "USD",
+      "country": "Russia",
+      "city": "Казань",
+      "username": "admin213",
+      "avatar": "https://cdn.icon-icons.com/icons2/2859/PNG/512/avatar_face_man_boy_profile_smiley_happy_people_icon_181659.png"
+    },
+    {
+      "id": "2",
+      "first": "Сергей",
+      "lastname": "Митрофанов",
+      "age": 37,
+      "currency": "RUB",
+      "country": "Belarus",
+      "city": "Minsk",
+      "username": "user great",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png?20141107110902"
+    }
+  ]
 }
