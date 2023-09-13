@@ -1,29 +1,28 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
 import {getUserAuthData} from "entities/User";
 import {ThunkConfig} from "app/providers/StoreProvider";
-import {getAddCommentFormText} from "../../selectors/addCommentFormSelectors";
 import {getArticleDetailsData} from "entities/Article/model/selectors/articleDetails";
-import {addCommentFormActions} from "features/addCommentForm/model/slices/addCommentFormSlice";
 
-export const sendComment = createAsyncThunk<
+import {fetchCommentsByArticleId} from "../../services/fetchCommentsByArticleId/fetchCommentsByArticleId";
+
+export const addCommentForArticle = createAsyncThunk<
     Comment,
-    void,
+    string,
     ThunkConfig<string>
 >(
-    'addCommentForm/sendComment',
-    async (authData, thunkApi) => {
-        const { extra, dispatch, rejectWithValue, getState } = thunkApi;
+    "articleDetails/addCommentForArticle",
+    async (text, thunkApi) => {
+        const {extra, dispatch, rejectWithValue, getState} = thunkApi;
 
         const userData = getUserAuthData(getState())
-        const text = getAddCommentFormText(getState())
         const article = getArticleDetailsData(getState())
 
-        if(!userData || !text || !article) {
-            return rejectWithValue('no data')
+        if (!userData || !text || !article) {
+            return rejectWithValue("no data")
         }
 
         try {
-            const response = await extra.api.post<Comment>('/comments', {
+            const response = await extra.api.post<Comment>("/comments", {
                 articleId: article.id,
                 userId: userData.id,
                 text,
@@ -32,10 +31,10 @@ export const sendComment = createAsyncThunk<
             if (!response.data) {
                 throw new Error();
             }
-            dispatch(addCommentFormActions.setText(''))
+            dispatch(fetchCommentsByArticleId(article.id))
             return response.data;
         } catch (e) {
-            return rejectWithValue('error');
+            return rejectWithValue("error");
         }
     },
 );

@@ -10,7 +10,7 @@ import {AppLink} from "shared/ui/AppLink/AppLink";
 
 interface CommentCardPropsType {
     className?: string;
-    comment: Comment;
+    comment?: Comment;
     isLoading?: boolean;
 }
 
@@ -18,7 +18,7 @@ export const CommentCard = memo(({className, comment, isLoading}: CommentCardPro
 
     if (isLoading) {
         return (
-            <div className={classNames(cls.CommentCard, {}, [className])}>
+            <div className={classNames(cls.CommentCard, {}, [className, cls.loading])}>
                 <div className={cls.header}>
                     <Skeleton width={30} height={30} border={"50%"}/>
                     <Skeleton height={16} width={100} className={cls.username}/>
@@ -26,6 +26,10 @@ export const CommentCard = memo(({className, comment, isLoading}: CommentCardPro
                 <Skeleton className={cls.text} width={"100%"} height={50}/>
             </div>
         )
+    }
+
+    if (!comment) {
+        return null
     }
 
     return (

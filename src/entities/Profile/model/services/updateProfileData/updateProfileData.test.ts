@@ -12,6 +12,7 @@ const data = {
     country: Country.Russia,
     city: "Saratov",
     username: "hazker",
+    id: "1",
 }
 
 describe("updateProfileData.test", () => {
@@ -47,7 +48,7 @@ describe("updateProfileData.test", () => {
     test("validate error", async () => {
         const thunk = new TestAsyncThunk(updateProfileData, {
             profile: {
-                form: { ...data, lastname: '' },
+                form: {...data, lastname: ""},
             }
         });
         const result = await thunk.callThunk();

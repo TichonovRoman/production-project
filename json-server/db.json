@@ -137,6 +137,12 @@
       "userId": "2",
       "text": "vxbvbvb",
       "id": "pJDBqAm"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "привет мир",
+      "id": "351fzlR"
     }
   ],
   "users": [
@@ -169,7 +175,7 @@
     },
     {
       "id": "2",
-      "first": "Сергей",
+      "first": "Сергейtt",
       "lastname": "Митрофанов",
       "age": 37,
       "currency": "RUB",
