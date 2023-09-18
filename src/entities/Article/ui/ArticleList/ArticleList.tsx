@@ -16,7 +16,9 @@ export const ArticleList = memo(({className, articles, view = ArticleView.SMALL,
     const {t} = useTranslation();
 
     const renderArticle = (article: Article) => {
-        return <ArticleListItem />
+        return <ArticleListItem
+            article={article}
+            view={view}/>
     }
 
     return (
