@@ -18,7 +18,11 @@ export const ArticleList = memo(({className, articles, view = ArticleView.SMALL,
     const renderArticle = (article: Article) => {
         return <ArticleListItem
             article={article}
-            view={view}/>
+            view={view}
+            className={cls.card}
+
+        />
+
     }
 
     return (
