@@ -29,7 +29,6 @@ export const useInfiniteScroll = ({callback, wrapperRef, triggerRef}: UseInfinit
             }, options);
 
             observer.observe(triggerElement)
-
         }
 
         // отписываемся при размонитровании от observer
