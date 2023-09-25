@@ -1,18 +1,15 @@
 import {CounterSchema} from "entities/Counter";
 import {UserSchema} from "entities/User";
 import {LoginSchema} from "features/AuthByUsername";
-import {
-    AnyAction, EnhancedStore, Reducer, ReducersMapObject,
-} from "@reduxjs/toolkit";
+import {AnyAction, EnhancedStore, Reducer, ReducersMapObject,} from "@reduxjs/toolkit";
 import {CombinedState} from "redux";
 import {ProfileSchema} from "entities/Profile";
 import {AxiosInstance} from "axios";
-import {To} from "history";
-import {NavigateOptions} from "react-router";
 import {ArticleDetailsSchema} from "entities/Article";
 import {ArticleDetailsCommentSchema} from "pages/ArticleDetailsPage";
 import {AddCommentFormSchema} from "features/addCommentForm";
 import {ArticlesPageSchema} from "pages/ArticlesPage";
+import {UiSchema} from "features/Ui";
 
 export type StateSchemaKey = keyof StateSchema;
 export type MountedReducers =  OptionalRecord<StateSchemaKey, boolean>;
@@ -20,6 +17,7 @@ export type MountedReducers =  OptionalRecord<StateSchemaKey, boolean>;
 export interface StateSchema {
     counter: CounterSchema;
     user: UserSchema;
+    ui: UiSchema;
 
     // Асинхронные редюсеры
     loginForm?: LoginSchema;

@@ -20,7 +20,7 @@ import {addCommentForArticle} from "../../model/services/addCommentForArticle/ad
 import {Button, ButtonTheme} from "shared/ui/Button/Button";
 import {navigate} from "@storybook/addon-links";
 import {RoutePath} from "shared/config/routeConfig/routeConfig";
-import {Page} from "shared/ui/Page/Page";
+import {Page} from "widgets/Page/Page";
 
 interface ArticleDetailsPagePropsType {
     className?: string
