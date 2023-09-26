@@ -1,6 +1,7 @@
 import {TestAsyncThunk} from "../../../../../shared/lib/tests/TestAsyncThunk/TestAsyncThunk";
 import {fetchNextArticlesPage} from "./fetchNextArticlesPage";
 import {fetchArticlesList} from "../fetchArticlesList/fetchArticlesList";
+import {ArticleSortField} from "entities/Article/model/types/article";
 
 // мокаем функцию которая вызовется внутри санки, чтобы напряму/ здесь проверить ее вызов
 jest.mock("../fetchArticlesList/fetchArticlesList")
@@ -15,7 +16,10 @@ describe('fetchNextArticlesPage.test', () => {
                 entities: {},
                 limit: 5,
                 isLoading: false,
-                hasMore: true
+                hasMore: true,
+                sort: ArticleSortField.CREATED,
+                search: '',
+                order: 'asc',
             }
         });
         await thunk.callThunk();
@@ -33,7 +37,10 @@ describe('fetchNextArticlesPage.test', () => {
                 entities: {},
                 limit: 5,
                 isLoading: false,
-                hasMore: false
+                hasMore: false,
+                sort: ArticleSortField.CREATED,
+                search: '',
+                order: 'asc',
             }
         });
         await thunk.callThunk();
@@ -53,7 +60,10 @@ describe('fetchNextArticlesPage.test', () => {
                 entities: {},
                 limit: 5,
                 isLoading: true,
-                hasMore: true
+                hasMore: true,
+                sort: ArticleSortField.CREATED,
+                search: '',
+                order: 'asc',
             }
         });
         await thunk.callThunk();
