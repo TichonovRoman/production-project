@@ -1,7 +1,7 @@
 import {TestAsyncThunk} from "../../../../../shared/lib/tests/TestAsyncThunk/TestAsyncThunk";
 import {fetchNextArticlesPage} from "./fetchNextArticlesPage";
 import {fetchArticlesList} from "../fetchArticlesList/fetchArticlesList";
-import {ArticleSortField} from "entities/Article/model/types/article";
+import {ArticleSortField, ArticleType} from "entities/Article/model/types/article";
 
 // мокаем функцию которая вызовется внутри санки, чтобы напряму/ здесь проверить ее вызов
 jest.mock("../fetchArticlesList/fetchArticlesList")
@@ -20,6 +20,7 @@ describe('fetchNextArticlesPage.test', () => {
                 sort: ArticleSortField.CREATED,
                 search: '',
                 order: 'asc',
+                type: ArticleType.ALL
             }
         });
         await thunk.callThunk();
@@ -41,6 +42,7 @@ describe('fetchNextArticlesPage.test', () => {
                 sort: ArticleSortField.CREATED,
                 search: '',
                 order: 'asc',
+                type: ArticleType.ALL
             }
         });
         await thunk.callThunk();
@@ -64,6 +66,7 @@ describe('fetchNextArticlesPage.test', () => {
                 sort: ArticleSortField.CREATED,
                 search: '',
                 order: 'asc',
+                type: ArticleType.ALL
             }
         });
         await thunk.callThunk();
