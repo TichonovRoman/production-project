@@ -1,4 +1,3 @@
-import cls from "./ArticleList.module.scss"
 import {classNames} from "shared/lib/classNames/classNames";
 import {useTranslation} from "react-i18next";
 import {memo} from "react";
@@ -6,6 +5,7 @@ import {Article, ArticleView} from "../../model/types/article";
 import {ArticleListItem} from "../ArticleListItem/ArticleListItem";
 import {ArticleListItemSkeleton} from "entities/Article/ui/ArticleListItem/ArticleListItemSkeleton";
 import {Text, TextSize} from "shared/ui/Text/Text"
+import cls from "./ArticleList.module.scss"
 
 
 interface ArticleListPropsType {
@@ -35,16 +35,16 @@ export const ArticleList = memo(({className, articles, view = ArticleView.SMALL,
 
             }
 
-            if(!isLoading && !articles.length) {
+            if (!isLoading && !articles.length) {
                 return (
-                    <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
-                        <Text size={TextSize.L} text={t('Статьи не найдены')}/>
+                    <div className={classNames(cls.ArticleList, {}, [cls[view], className])}>
+                        <Text size={TextSize.L} text={t("Статьи не найдены")}/>
                     </div>
                 )
             }
 
             return (
-                <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
+                <div className={classNames(cls.ArticleList, {}, [cls[view], className])}>
                     {articles.length > 0
                         ? articles.map(renderArticle)
                         : null

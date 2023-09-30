@@ -6,7 +6,7 @@ import {CombinedState} from "redux";
 import {ProfileSchema} from "entities/Profile";
 import {AxiosInstance} from "axios";
 import {ArticleDetailsSchema} from "entities/Article";
-import {ArticleDetailsCommentSchema} from "pages/ArticleDetailsPage";
+import {ArticleDetailsCommentSchema, ArticleDetailsRecommendationsSchema} from "pages/ArticleDetailsPage";
 import {AddCommentFormSchema} from "features/addCommentForm";
 import {ArticlesPageSchema} from "pages/ArticlesPage";
 import {UiSchema} from "features/Ui";
@@ -24,9 +24,9 @@ export interface StateSchema {
     profile?: ProfileSchema;
     articleDetails?: ArticleDetailsSchema;
     articleDetailsComments?: ArticleDetailsCommentSchema;
+    articleDetailsRecommendations?: ArticleDetailsRecommendationsSchema
     addCommentForm?: AddCommentFormSchema;
     articlesPage?: ArticlesPageSchema;
-
 }
 
 
