@@ -1,4 +1,3 @@
-
 import {classNames} from "shared/lib/classNames/classNames";
 import {useTranslation} from "react-i18next";
 import {memo, useCallback} from "react";
@@ -28,14 +27,14 @@ import {
 } from "../../model/services/fetchArticleRecommendations/fetchArticleRecommendations";
 
 import cls from "./ArticleDetailsPage.module.scss"
+import {articleDetailsPageReducer} from "../../model/slices";
 
 interface ArticleDetailsPagePropsType {
     className?: string
 }
 
 const reducers: ReducersList = {
-    articleDetailsComments: articleDetailsCommentsReducer,
-    articleDetailsRecommendations: articleDetailsPageRecommendationsReducer,
+    articleDetailsPage: articleDetailsPageReducer
 }
 
 const ArticleDetailsPage = ({className}: ArticleDetailsPagePropsType) => {
@@ -74,18 +73,18 @@ const ArticleDetailsPage = ({className}: ArticleDetailsPagePropsType) => {
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
                 <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
-                    {t('Назад к списку')}
+                    {t("Назад к списку")}
                 </Button>
                 <ArticleDetails id={id}/>
                 <Text
                     size={TextSize.L}
                     className={cls.commentTitle}
                     title={t("Рекомендуем")}/>
-                 <ArticleList
-                     className={cls.recommendations}
-                     articles={recommendations}
-                     isLoading={recommendationsIsLoading}
-                 />
+                <ArticleList target={"_blank"}
+                             className={cls.recommendations}
+                             articles={recommendations}
+                             isLoading={recommendationsIsLoading}
+                />
                 <Text
                     size={TextSize.L}
                     className={cls.commentTitle}

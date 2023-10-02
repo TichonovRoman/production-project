@@ -1,6 +1,6 @@
 import {classNames} from "shared/lib/classNames/classNames";
 import {useTranslation} from "react-i18next";
-import {memo} from "react";
+import {HTMLAttributeAnchorTarget, memo} from "react";
 import {Article, ArticleView} from "../../model/types/article";
 import {ArticleListItem} from "../ArticleListItem/ArticleListItem";
 import {ArticleListItemSkeleton} from "entities/Article/ui/ArticleListItem/ArticleListItemSkeleton";
@@ -12,7 +12,8 @@ interface ArticleListPropsType {
     className?: string;
     articles: Article[];
     isLoading?: boolean;
-    view?: ArticleView
+    view?: ArticleView;
+    target?: HTMLAttributeAnchorTarget
 }
 
 const getSkeletons = (view: ArticleView) => {
@@ -21,11 +22,12 @@ const getSkeletons = (view: ArticleView) => {
         .map((item, index) => (<ArticleListItemSkeleton className={cls.card} key={index} view={view}/>))
 }
 
-export const ArticleList = memo(({className, articles, view = ArticleView.SMALL, isLoading}: ArticleListPropsType) => {
+export const ArticleList = memo(({className, articles, view = ArticleView.SMALL, isLoading, target}: ArticleListPropsType) => {
             const {t} = useTranslation();
 
             const renderArticle = (article: Article) => {
                 return <ArticleListItem
+                    target={target}
                     article={article}
                     view={view}
                     className={cls.card}
