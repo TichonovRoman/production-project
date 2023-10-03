@@ -28,6 +28,7 @@ import {
 
 import cls from "./ArticleDetailsPage.module.scss"
 import {articleDetailsPageReducer} from "../../model/slices";
+import {ArticleDetailsPageHeader} from "pages/ArticleDetailsPage/ui/ArticleDetailsPageHeader/ArticleDetailsPageHeader";
 
 interface ArticleDetailsPagePropsType {
     className?: string
@@ -45,11 +46,6 @@ const ArticleDetailsPage = ({className}: ArticleDetailsPagePropsType) => {
     const recommendations = useSelector(getArticleRecommendations.selectAll)
     const commentsIsLoading = useSelector(getArticleCommentsIsLoading)
     const recommendationsIsLoading = useSelector(getArticleRecommendationsIsLoading)
-    const navigate = useNavigate()
-
-    const onBackToList = useCallback(() => {
-        navigate(RoutePath.articles)
-    }, [navigate])
 
     const onSendComment = useCallback((text: string) => {
         dispatch(addCommentForArticle(text))
@@ -67,20 +63,16 @@ const ArticleDetailsPage = ({className}: ArticleDetailsPagePropsType) => {
             </Page>
         )
     }
-
-
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-                <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
-                    {t("Назад к списку")}
-                </Button>
+                <ArticleDetailsPageHeader />
                 <ArticleDetails id={id}/>
                 <Text
                     size={TextSize.L}
                     className={cls.commentTitle}
                     title={t("Рекомендуем")}/>
-                <ArticleList target={"_blank"}
+                <ArticleList target={'_blank'}
                              className={cls.recommendations}
                              articles={recommendations}
                              isLoading={recommendationsIsLoading}
