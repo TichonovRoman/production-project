@@ -17,7 +17,7 @@ export function buildBabelLoader({isDev}: BuildOptions) {
                         },
                     ],
                     isDev && require.resolve('react-refresh/babel'),
-                ].filter(value => !value),
+                ].filter(value => !!value),
             },
         },
     }
