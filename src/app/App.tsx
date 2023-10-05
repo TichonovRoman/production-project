@@ -5,6 +5,8 @@ import {AppRouter} from "app/providers/router";
 import {Navbar} from "widgets/Navbar";
 import {useDispatch, useSelector} from "react-redux";
 import {getUserInited, userActions} from "entities/User";
+import {Sidebar} from "widgets/Sidebar/ui/Sidebar/Sidebar";
+// import {Sidebar} from "widgets/Sidebar/Sidebar/";
 
 const App = () => {
     const {theme} = useTheme();
@@ -20,7 +22,7 @@ const App = () => {
             <Suspense fallback="">
                 <Navbar/>
                 <div className="content-page">
-                    {/*<Sidebar/>*/}
+                    <Sidebar/>
                     { inited && <AppRouter/> }
                 </div>
             </Suspense>
