@@ -89,3 +89,31 @@ Column.args = {
         </>
     )
 };
+
+export const ColumnGap16 = Template.bind({});
+ColumnGap16.args = {
+    gap: "16",
+    direction: "column",
+    children: (
+        <>
+            <div>first</div>
+            <div>first</div>
+            <div>first</div>
+            <div>first</div>
+        </>
+    )
+};
+
+export const ColumnAlignEnd = Template.bind({});
+ColumnAlignEnd.args = {
+    direction: "column",
+    align: "end",
+    children: (
+        <>
+            <div>first</div>
+            <div>first</div>
+            <div>first</div>
+            <div>first</div>
+        </>
+    )
+};
