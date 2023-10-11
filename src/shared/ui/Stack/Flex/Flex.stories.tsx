@@ -13,5 +13,79 @@ export default {
 
 const Template: ComponentStory<typeof Flex> = (args) => <Flex {...args} />;
 
-export const Normal = Template.bind({});
-Normal.args = {};
+export const Row = Template.bind({});
+Row.args = {
+    children: (
+        <>
+            <div>first</div>
+            <div>first</div>
+            <div>first</div>
+            <div>first</div>
+        </>
+    )
+};
+
+export const RowGap4 = Template.bind({});
+RowGap4.args = {
+    gap: "4",
+    children: (
+        <>
+            <div>first</div>
+            <div>first</div>
+            <div>first</div>
+            <div>first</div>
+        </>
+    )
+};
+
+export const RowGap8 = Template.bind({});
+RowGap8.args = {
+    gap: "8",
+    children: (
+        <>
+            <div>first</div>
+            <div>first</div>
+            <div>first</div>
+            <div>first</div>
+        </>
+    )
+};
+
+export const RowGap16 = Template.bind({});
+RowGap16.args = {
+    gap: "16",
+    children: (
+        <>
+            <div>first</div>
+            <div>first</div>
+            <div>first</div>
+            <div>first</div>
+        </>
+    )
+};
+
+export const RowGap32 = Template.bind({});
+RowGap32.args = {
+    gap: "32",
+    children: (
+        <>
+            <div>first</div>
+            <div>first</div>
+            <div>first</div>
+            <div>first</div>
+        </>
+    )
+};
+
+export const Column = Template.bind({});
+Column.args = {
+    direction: "column",
+    children: (
+        <>
+            <div>first</div>
+            <div>first</div>
+            <div>first</div>
+            <div>first</div>
+        </>
+    )
+};
