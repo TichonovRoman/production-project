@@ -56,8 +56,6 @@ const ArticlesPage = ({className}: ArticlesPagePropsType) => {
                 />
             </Page>
         </DynamicModuleLoader>
-
-
     );
 };
 export default memo(ArticlesPage)
