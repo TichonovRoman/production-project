@@ -21,13 +21,14 @@
   },
   "plugins": [
     "react",
-    "prettier",
+//    "prettier",
     "react-hooks",
     "@typescript-eslint",
     "i18next",
-    "react-hooks"
+    "tihonovrv-plugin"
   ],
   "rules": {
+    "tihonovrv-plugin/path-checker": "error",
     "i18next/no-literal-string": ["error", {
       "markupOnly": true,
       "ignoreAttribute": ["data-testid", "to", "target", "justify", "align", "direction", "gap"]
