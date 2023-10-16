@@ -1,6 +1,5 @@
 import cls from "./Page.module.scss"
 import {classNames} from "shared/lib/classNames/classNames";
-import {useTranslation} from "react-i18next";
 import {memo, MutableRefObject, ReactNode, useRef, UIEvent} from "react";
 import {useInfiniteScroll} from "shared/lib/hooks/useInfiniteScroll/useInfiniteScroll";
 import {useAppDispatch} from "shared/lib/hooks/useAppDispatch/useAppDispatch";
