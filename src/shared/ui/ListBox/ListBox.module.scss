@@ -7,9 +7,9 @@ position: relative;
   outline: none;
   padding: 0;
   margin: 0;
-
 }
 .options {
+  width: 100%;
   background: var(--listbox-bg);
   position: absolute;
   z-index: 10000;
@@ -22,4 +22,7 @@ position: relative;
 
 .active {
   background: var(--inverted-primary-color);
+}
+.disabled {
+  opacity: 0.5;
 }

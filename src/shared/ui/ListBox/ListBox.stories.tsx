@@ -11,6 +11,7 @@ export default {
     },
 } as ComponentMeta<typeof ListBox>;
 
+// @ts-ignore
 const Template: ComponentStory<typeof ListBox> = (args) => <ListBox {...args} />;
 
 export const Normal = Template.bind({});

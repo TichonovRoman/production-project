@@ -17,7 +17,17 @@ const MainPage = () => {
             {t("Главная страница")}
             <HStack>
                 <div>;lgjeqr; j</div>
-                <ListBox/>
+                <ListBox
+                    defaultValue={"Выберите значение"}
+                    onChange={(value) => {
+                    }}
+                    value={undefined}
+                    items={[
+                        {value: "1", content: "111111111"},
+                        {value: "2", content: "222222222", disabled: true},
+                        {value: "3", content: "333333333"},
+                    ]}
+                />
             </HStack>
 
         </div>
