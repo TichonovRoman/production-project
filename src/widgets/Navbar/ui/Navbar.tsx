@@ -9,6 +9,8 @@ import {getUserAuthData, userActions} from "entities/User";
 import cls from "./Navbar.module.scss";
 import {AppLink, AppLinkTheme} from "shared/ui/AppLink/AppLink";
 import {RoutePath} from "shared/config/routeConfig/routeConfig";
+import {Dropdown} from "shared/ui/Dropdown/Dropdown";
+import {Avatar} from "shared/ui/Avatar/Avatar";
 
 interface NavbarProps {
     className?: string;
@@ -46,13 +48,13 @@ export const Navbar = memo(({className}: NavbarProps) => {
                 >
                     {t("Создать статью")}
                 </AppLink>
-                <Button
-                    theme={ButtonTheme.CLEAR_INVERTED}
-                    className={cls.links}
-                    onClick={onLogout}
-                >
-                    {t("Выйти")}
-                </Button>
+                <Dropdown
+                    className={cls.dropdown}
+                    items={[
+                        {content: t('Выйти'), onClick: onLogout}
+                    ]}
+                    trigger={<Avatar size={30} src={authData.avatar} alt={"avatar"}/>}
+                />
             </header>
         );
     }
