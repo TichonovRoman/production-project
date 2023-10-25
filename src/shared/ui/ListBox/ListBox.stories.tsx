@@ -9,10 +9,55 @@ export default {
     argTypes: {
         backgroundColor: {control: "color"},
     },
+    decorators: [
+        (Story) => <div style={{padding: 100}}><Story/></div>
+    ]
 } as ComponentMeta<typeof ListBox>;
 
-// @ts-ignore
 const Template: ComponentStory<typeof ListBox> = (args) => <ListBox {...args} />;
 
 export const Normal = Template.bind({});
-Normal.args = {};
+Normal.args = {
+    value: '1123',
+    items: [
+        {content: 'tghkrthrt', value: '123'},
+        {content: 'tthrt', value: '12113'},
+    ]
+};
+export const topLeft = Template.bind({});
+topLeft.args = {
+    direction: 'top left',
+    value: '1123',
+    items: [
+        {content: 'tghkrthrt', value: '123'},
+        {content: 'tthrt', value: '12113'},
+    ]
+};
+export const topRight = Template.bind({});
+topRight.args = {
+    direction: 'top right',
+    value: '1123',
+    items: [
+        {content: 'tghkrthrt', value: '123'},
+        {content: 'tthrt', value: '12113'},
+    ]
+};
+
+export const bottomRight = Template.bind({});
+bottomRight.args = {
+    direction: 'bottom right',
+    value: '1123',
+    items: [
+        {content: 'tghkrthrt', value: '123'},
+        {content: 'tthrt', value: '12113'},
+    ]
+};
+export const bottomLeft = Template.bind({});
+bottomLeft.args = {
+    direction: 'bottom left',
+    value: '1123',
+    items: [
+        {content: 'tghkrthrt', value: '123'},
+        {content: 'tthrt', value: '12113'},
+    ]
+};

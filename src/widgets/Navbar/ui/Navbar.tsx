@@ -48,12 +48,13 @@ export const Navbar = memo(({className}: NavbarProps) => {
                 >
                     {t("Создать статью")}
                 </AppLink>
-                <Dropdown
-                    className={cls.dropdown}
-                    items={[
-                        {content: t('Выйти'), onClick: onLogout}
-                    ]}
-                    trigger={<Avatar size={30} src={authData.avatar} alt={"avatar"}/>}
+                <Dropdown direction={"bottom left"}
+                          className={cls.dropdown}
+                          items={[
+                              {content: t("Профиль"), href: RoutePath.profile + authData.id},
+                              {content: t("Выйти"), onClick: onLogout},
+                          ]}
+                          trigger={<Avatar size={30} src={authData.avatar} alt={"avatar"}/>}
                 />
             </header>
         );
