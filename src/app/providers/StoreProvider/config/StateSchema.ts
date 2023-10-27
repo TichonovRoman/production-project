@@ -14,6 +14,7 @@ import {
 import {AddCommentFormSchema} from "features/addCommentForm";
 import {ArticlesPageSchema} from "pages/ArticlesPage";
 import {UiSchema} from "features/Ui";
+import {rtkApi} from "shared/api/rtkApi";
 
 export type StateSchemaKey = keyof StateSchema;
 export type MountedReducers =  OptionalRecord<StateSchemaKey, boolean>;
@@ -22,6 +23,7 @@ export interface StateSchema {
     counter: CounterSchema;
     user: UserSchema;
     ui: UiSchema;
+    [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>
 
     // Асинхронные редюсеры
     loginForm?: LoginSchema;

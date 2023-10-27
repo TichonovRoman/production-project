@@ -25,6 +25,7 @@ import cls from "./ArticleDetailsPage.module.scss"
 import {articleDetailsPageReducer} from "../../model/slices";
 import {ArticleDetailsPageHeader} from "pages/ArticleDetailsPage/ui/ArticleDetailsPageHeader/ArticleDetailsPageHeader";
 import {VStack} from "shared/ui/Stack";
+import {ArticleRecommendationsList} from "features/articleRecommendationsList";
 
 interface ArticleDetailsPagePropsType {
     className?: string
@@ -39,9 +40,7 @@ const ArticleDetailsPage = ({className}: ArticleDetailsPagePropsType) => {
     const {id} = useParams<{ id: string }>()
     const dispatch = useAppDispatch();
     const comments = useSelector(getArticleComments.selectAll)
-    const recommendations = useSelector(getArticleRecommendations.selectAll)
     const commentsIsLoading = useSelector(getArticleCommentsIsLoading)
-    const recommendationsIsLoading = useSelector(getArticleRecommendationsIsLoading)
 
     const onSendComment = useCallback((text: string) => {
         dispatch(addCommentForArticle(text))
@@ -49,7 +48,6 @@ const ArticleDetailsPage = ({className}: ArticleDetailsPagePropsType) => {
 
     useInitialEffect(() => {
         dispatch(fetchCommentsByArticleId(id));
-        dispatch(fetchArticleRecommendations());
     })
 
     if (!id) {
@@ -65,15 +63,7 @@ const ArticleDetailsPage = ({className}: ArticleDetailsPagePropsType) => {
                 <VStack gap={'16'} max>
                     <ArticleDetailsPageHeader/>
                     <ArticleDetails id={id}/>
-                    <Text
-                        size={TextSize.L}
-                        className={cls.commentTitle}
-                        title={t("Рекомендуем")}/>
-                    <ArticleList target={"_blank"}
-                                 className={cls.recommendations}
-                                 articles={recommendations}
-                                 isLoading={recommendationsIsLoading}
-                    />
+                    <ArticleRecommendationsList />
                     <Text
                         size={TextSize.L}
                         className={cls.commentTitle}
