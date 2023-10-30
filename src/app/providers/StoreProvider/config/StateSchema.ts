@@ -3,7 +3,6 @@ import {UserSchema} from "entities/User";
 import {LoginSchema} from "features/AuthByUsername";
 import {AnyAction, EnhancedStore, Reducer, ReducersMapObject,} from "@reduxjs/toolkit";
 import {CombinedState} from "redux";
-import {ProfileSchema} from "entities/Profile";
 import {AxiosInstance} from "axios";
 import {ArticleDetailsSchema} from "entities/Article";
 import {
@@ -15,6 +14,7 @@ import {AddCommentFormSchema} from "features/addCommentForm";
 import {ArticlesPageSchema} from "pages/ArticlesPage";
 import {UiSchema} from "features/Ui";
 import {rtkApi} from "shared/api/rtkApi";
+import {ProfileSchema} from "features/editableProfileCard";
 
 export type StateSchemaKey = keyof StateSchema;
 export type MountedReducers =  OptionalRecord<StateSchemaKey, boolean>;

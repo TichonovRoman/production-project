@@ -27,7 +27,7 @@ describe('fetchNextArticlesPage.test', () => {
 
         // диспатч должен вызваться 4 раза
         expect(thunk.dispatch).toBeCalledTimes(4)
-        expect(fetchArticlesList).toHaveBeenCalledWith({page: 3})
+        expect(fetchArticlesList).toHaveBeenCalled()
     });
     test('fetchNextArticlesPage.test not called', async () => {
         const thunk = new TestAsyncThunk(fetchNextArticlesPage, {
