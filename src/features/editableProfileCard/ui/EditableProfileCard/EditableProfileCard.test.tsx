@@ -89,10 +89,8 @@ describe("features/EditableProfileCard", () => {
         await userEvent.type(screen.getByTestId("ProfileCard.firstName"), 'admin2')
         // кликаем на Сохранить
         await userEvent.click(screen.getByTestId("EditableProfileCardHeader.SaveButton"));
-
         // метод дб вызван
         expect(mockPutReq).toHaveBeenCalled()
-
     });
 
 });
