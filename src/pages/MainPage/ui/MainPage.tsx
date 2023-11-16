@@ -29,7 +29,6 @@ const MainPage = () => {
                     ]}
                 />
             </HStack>
-
         </div>
     );
 };

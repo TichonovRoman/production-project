@@ -2,6 +2,7 @@ import React from "react";
 import {ComponentStory, ComponentMeta} from "@storybook/react";
 
 import {ArticleCodeBlockComponent} from "./ArticleCodeBlockComponent";
+import {StoreDecorator} from "shared/config/storybook/StoreDecorator/StoreDecorator";
 
 export default {
     title: "shared/ArticleCodeBlockComponent",
@@ -15,3 +16,4 @@ const Template: ComponentStory<typeof ArticleCodeBlockComponent> = (args) => <Ar
 
 export const Normal = Template.bind({});
 Normal.args = {};
+Normal.decorators = [StoreDecorator({})]
