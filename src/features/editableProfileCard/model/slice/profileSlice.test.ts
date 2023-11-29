@@ -1,9 +1,9 @@
 import {Currency} from "entities/Currency";
 import {Country} from "entities/Country";
 import {ProfileSchema} from "features/editableProfileCard";
-import {ValidateProfileError} from "features/editableProfileCard/model/types/editableProfileCardSchema";
-import {profileActions, profileReducer} from "features/editableProfileCard/model/slice/profileSlice";
-import {updateProfileData} from "features/editableProfileCard/model/services/updateProfileData/updateProfileData";
+import {profileActions, profileReducer} from "./profileSlice";
+import {updateProfileData} from "../services/updateProfileData/updateProfileData";
+import {ValidateProfileError} from "../../model/const/consts";
 
 const data = {
     first: "Павел",

@@ -2,7 +2,7 @@ import cls from "./ArticleListItem.module.scss"
 import {classNames} from "shared/lib/classNames/classNames";
 import {useTranslation} from "react-i18next";
 import {HTMLAttributeAnchorTarget, memo, useCallback} from "react";
-import {Article, ArticleBlockType, ArticleTextBlock, ArticleView} from "../../model/types/article";
+import {Article, ArticleTextBlock} from "../../model/types/article";
 import {Text} from "shared/ui/Text/Text"
 import {Icon} from "shared/ui/Icon/Icon";
 import EyeIcon from "shared/assets/icons/eye.svg"
@@ -10,9 +10,9 @@ import {Card} from "shared/ui/Card/Card";
 import {Avatar} from "shared/ui/Avatar/Avatar";
 import {Button, ButtonTheme} from "shared/ui/Button/Button";
 import {ArticleTextBlockComponent} from "../ArticleTextBlockComponent/ArticleTextBlockComponent";
-import {useNavigate} from "react-router-dom";
 import {RoutePath} from "shared/config/routeConfig/routeConfig";
 import {AppLink} from "shared/ui/AppLink/AppLink";
+import {ArticleBlockType, ArticleView} from "../../model/consts/articleConsts";
 
 interface ArticleListItemPropsType {
     className?: string;

@@ -2,7 +2,7 @@ import cls from "./Tabs.module.scss"
 import {classNames} from "shared/lib/classNames/classNames";
 import {memo, ReactNode, useCallback, useMemo} from "react";
 import {Card, CardTheme} from "shared/ui/Card/Card";
-import {ArticleType} from "entities/Article/model/types/article";
+import {ArticleType} from "entities/Article/model/consts/articleConsts";
 
 export interface TabsItem {
     value: string,

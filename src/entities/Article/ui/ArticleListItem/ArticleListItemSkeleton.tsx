@@ -1,11 +1,6 @@
 import {Card} from "shared/ui/Card/Card";
-import {Avatar} from "shared/ui/Avatar/Avatar";
-import {Button, ButtonTheme} from "shared/ui/Button/Button";
-import {ArticleTextBlockComponent} from "../ArticleTextBlockComponent/ArticleTextBlockComponent";
-import {useNavigate} from "react-router-dom";
-import {RoutePath} from "shared/config/routeConfig/routeConfig";
 import {memo} from "react";
-import {ArticleView} from "entities/Article";
+import {ArticleView} from "../../model/consts/articleConsts";
 import {Skeleton} from "shared/ui/Skeleton/Skeleton";
 import cls from "./ArticleListItem.module.scss"
 import {classNames} from "shared/lib/classNames/classNames";

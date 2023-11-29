@@ -2,7 +2,7 @@ import {Currency} from "entities/Currency";
 import {Country} from "entities/Country";
 import {TestAsyncThunk} from "shared/lib/tests/TestAsyncThunk/TestAsyncThunk";
 import {updateProfileData} from "features/editableProfileCard/model/services/updateProfileData/updateProfileData";
-import {ValidateProfileError} from "features/editableProfileCard/model/types/editableProfileCardSchema";
+import {ValidateProfileError} from "features/editableProfileCard/model/const/consts";
 
 const data = {
     first: "Павел",

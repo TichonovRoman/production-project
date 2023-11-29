@@ -1,11 +1,11 @@
 import cls from "./ArticleViewSelector.module.scss"
 import {classNames} from "shared/lib/classNames/classNames";
 import {memo} from "react";
-import {ArticleView} from "entities/Article";
 import ListIcon from "shared/assets/icons/BigList.svg"
 import TiledIcon from "shared/assets/icons/SmallList.svg"
 import {Button, ButtonTheme} from "shared/ui/Button/Button";
 import {Icon} from "shared/ui/Icon/Icon";
+import {ArticleView} from "../../model/consts/articleConsts";
 
 interface ArticleViewSelectorPropsType {
     className?: string;
@@ -43,7 +43,6 @@ export const ArticleViewSelector = memo(({className, onViewClick, view}: Article
                     />
                 </Button>
             ))}
-
         </div>
     );
 });
