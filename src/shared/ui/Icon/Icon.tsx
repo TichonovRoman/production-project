@@ -5,10 +5,11 @@ import React, {memo} from "react";
 interface IconPropsType {
     className?: string;
     Svg: React.VFC<React.SVGProps<SVGSVGElement>>;
+    inverted?: boolean
 }
 
-export const Icon = memo(({className, Svg}: IconPropsType) => {
+export const Icon = memo(({className, Svg, inverted}: IconPropsType) => {
     return (
-        <Svg className={classNames(cls.Icon, {}, [className])} />
+        <Svg className={classNames(inverted ? cls.inverted : cls.Icon, {}, [className])}/>
     );
 });

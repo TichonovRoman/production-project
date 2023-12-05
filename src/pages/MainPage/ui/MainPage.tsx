@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import {useTranslation} from "react-i18next";
-import {Input} from "shared/ui/Input/Input";
-import {ListBox} from "shared/ui/ListBox/ListBox";
+import {ListBox} from "shared/ui/Popups";
 import {HStack} from "shared/ui/Stack";
 
 const MainPage = () => {

@@ -31,7 +31,18 @@
     "tihonovrv-plugin/path-checker": "error",
     "i18next/no-literal-string": ["error", {
       "markupOnly": true,
-      "ignoreAttribute": ["data-testid", "to", "target", "justify", "align", "direction", "gap", "role", "as"]
+      "ignoreAttribute": [
+        "data-testid",
+        "to",
+        "target",
+        "justify",
+        "align",
+        "border",
+        "direction",
+        "gap",
+        "role",
+        "as"
+      ]
     }],
     "indent": "off",
     "radix": 0,
