@@ -1,6 +1,6 @@
-import {LoginSchema} from "features/AuthByUsername";
+import {LoginSchema} from "@/features/AuthByUsername";
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
-import {loginByUsername} from "features/AuthByUsername/model/services/loginByUsername/loginByUsername";
+import {loginByUsername} from "@/features/AuthByUsername/model/services/loginByUsername/loginByUsername";
 import {AddCommentFormSchema} from "../types/addCommentForm";
 
 const initialState: AddCommentFormSchema = {

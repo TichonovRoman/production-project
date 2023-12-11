@@ -1,7 +1,7 @@
-import {StateSchema} from "app/providers/StoreProvider";
+import {StateSchema} from "@/app/providers/StoreProvider";
 import {
     getProfileIsLoading
-} from "features/editableProfileCard/model/selectors/getProfileIsLoading/getProfileIsLoading";
+} from "@/features/editableProfileCard/model/selectors/getProfileIsLoading/getProfileIsLoading";
 
 describe("getProfileIsLoading.test", () => {
     test("should return loading status", () => {

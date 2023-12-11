@@ -1,20 +1,20 @@
-import {CounterSchema} from "entities/Counter";
-import {UserSchema} from "entities/User";
-import {LoginSchema} from "features/AuthByUsername";
+import {CounterSchema} from "@/entities/Counter";
+import {UserSchema} from "@/entities/User";
+import {LoginSchema} from "@/features/AuthByUsername";
 import {AnyAction, EnhancedStore, Reducer, ReducersMapObject,} from "@reduxjs/toolkit";
 import {CombinedState} from "redux";
 import {AxiosInstance} from "axios";
-import {ArticleDetailsSchema} from "entities/Article";
+import {ArticleDetailsSchema} from "@/entities/Article";
 import {
     ArticleDetailsCommentSchema,
     ArticleDetailsPageSchema,
     ArticleDetailsRecommendationsSchema
-} from "pages/ArticleDetailsPage";
-import {AddCommentFormSchema} from "features/addCommentForm";
-import {ArticlesPageSchema} from "pages/ArticlesPage";
-import {UiSchema} from "features/Ui";
-import {rtkApi} from "shared/api/rtkApi";
-import {ProfileSchema} from "features/editableProfileCard";
+} from "@/pages/ArticleDetailsPage";
+import {AddCommentFormSchema} from "@/features/addCommentForm";
+import {ArticlesPageSchema} from "@/pages/ArticlesPage";
+import {UiSchema} from "@/features/Ui";
+import {rtkApi} from "@/shared/api/rtkApi";
+import {ProfileSchema} from "@/features/editableProfileCard";
 
 export type StateSchemaKey = keyof StateSchema;
 export type MountedReducers =  OptionalRecord<StateSchemaKey, boolean>;

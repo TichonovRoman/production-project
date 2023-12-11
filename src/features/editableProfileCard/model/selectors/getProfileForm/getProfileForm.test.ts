@@ -1,7 +1,7 @@
-import {StateSchema} from "app/providers/StoreProvider";
-import {Currency} from "entities/Currency";
-import {Country} from "entities/Country";
-import {getProfileForm} from "features/editableProfileCard/model/selectors/getProfileForm/getProfileForm";
+import {StateSchema} from "@/app/providers/StoreProvider";
+import {Currency} from "@/entities/Currency";
+import {Country} from "@/entities/Country";
+import {getProfileForm} from "@/features/editableProfileCard/model/selectors/getProfileForm/getProfileForm";
 
 describe("getProfileForm.test", () => {
     test("should return form data", () => {

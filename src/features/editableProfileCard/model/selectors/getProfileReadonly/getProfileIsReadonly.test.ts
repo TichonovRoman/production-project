@@ -1,5 +1,5 @@
-import {StateSchema} from "app/providers/StoreProvider";
-import {getProfileReadonly} from "features/editableProfileCard/model/selectors/getProfileReadonly/getProfileReadonly";
+import {StateSchema} from "@/app/providers/StoreProvider";
+import {getProfileReadonly} from "@/features/editableProfileCard/model/selectors/getProfileReadonly/getProfileReadonly";
 
 describe("getProfileReadonly.test", () => {
     test("should return loading status", () => {
