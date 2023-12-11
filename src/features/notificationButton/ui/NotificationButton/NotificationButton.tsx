@@ -8,7 +8,6 @@ import NotificationIcon from "@/shared/assets/icons/notification.svg";
 import {NotificationList} from "@/entities/Notification";
 import {Drawer} from "@/shared/ui/Drawer/Drawer";
 import {BrowserView, MobileView} from "react-device-detect";
-import {AnimationProvider} from "@/shared/lib/components/AnimationProvider";
 
 interface NotificationButtonPropsType {
     className?: string
