@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import {useTranslation} from "react-i18next";
-import {ListBox} from "@/shared/ui/Popups";
-import {HStack} from "@/shared/ui/Stack";
+import {Page} from "@/widgets/Page/Page";
 
 const MainPage = () => {
     const {t} = useTranslation();
@@ -12,23 +11,9 @@ const MainPage = () => {
     };
 
     return (
-        <div style={{color: "red"}}>
+        <Page>
             {t("Главная страница")}
-            <HStack>
-                <div>;lgjeqr; j</div>
-                <ListBox
-                    defaultValue={"Выберите значение"}
-                    onChange={(value) => {
-                    }}
-                    value={undefined}
-                    items={[
-                        {value: "1", content: "111111111"},
-                        {value: "2", content: "222222222", disabled: true},
-                        {value: "3", content: "333333333"},
-                    ]}
-                />
-            </HStack>
-        </div>
+        </Page>
     );
 };
 
