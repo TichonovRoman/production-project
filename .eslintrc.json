@@ -21,7 +21,7 @@
   },
   "plugins": [
     "react",
-//    "prettier",
+    "prettier",
     "react-hooks",
     "@typescript-eslint",
     "i18next",
@@ -29,6 +29,7 @@
   ],
   "rules": {
     "tihonovrv-plugin/path-checker": "error",
+    "tihonovrv-plugin/rule-name": 2,
     "i18next/no-literal-string": ["error", {
       "markupOnly": true,
       "ignoreAttribute": [
