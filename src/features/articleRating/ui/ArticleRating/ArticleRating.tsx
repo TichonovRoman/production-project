@@ -3,11 +3,12 @@ import {RatingCard} from "@/entities/Rating";
 import {useTranslation} from "react-i18next";
 
 interface ArticleRatingProps {
-    className?: string
+    className?: string;
+    articleId: string
 }
 
 export const ArticleRating = memo((props: ArticleRatingProps) => {
-    const { className } = props;
+    const { className, articleId } = props;
     const { t } = useTranslation();
     return (
         <RatingCard

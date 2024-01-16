@@ -1,5 +1,4 @@
 import React, {memo, useCallback, useState} from 'react';
-import cls from './RatingCard.module.scss'
 import {Card} from "@/shared/ui/Card/Card";
 import {classNames} from "@/shared/lib/classNames/classNames";
 import {HStack, VStack} from "@/shared/ui/Stack";
@@ -11,7 +10,6 @@ import {useTranslation} from "react-i18next";
 import {Button, ButtonTheme} from "@/shared/ui/Button/Button";
 import {BrowserView, MobileView} from "react-device-detect";
 import {Drawer} from "@/shared/ui/Drawer/Drawer";
-import {NotificationList} from "@/entities/Notification";
 
 interface RatingCardProps {
     className?: string;
@@ -25,7 +23,7 @@ interface RatingCardProps {
 
 export const RatingCard = memo((props: RatingCardProps) => {
     const {
-        className, onAccept, hasFeedback, feedbackTitle, title, onCancel, rate
+        className, onAccept, hasFeedback, feedbackTitle, title, onCancel, rate = 0
     } = props;
     const {t} = useTranslation();
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -60,7 +58,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
     )
 
     return (
-        <Card className={classNames(cls.RatingCard, {}, [className])}>
+        <Card className={className} max>
             <VStack align={'center'} gap={'8'}>
                 <Text title={title}/>
                 <StarRating size={40} onSelect={onSelectStars}/>
