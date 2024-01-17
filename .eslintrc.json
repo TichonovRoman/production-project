@@ -28,7 +28,9 @@
     "tihonovrv-plugin"
   ],
   "rules": {
-    "tihonovrv-plugin/path-checker": "error",
+    "tihonovrv-plugin/path-checker": ["error", {
+      "alias": "@"
+    }],
     "tihonovrv-plugin/rule-name": 2,
     "i18next/no-literal-string": ["error", {
       "markupOnly": true,
