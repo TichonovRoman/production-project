@@ -8653,10 +8653,10 @@ eslint-plugin-react@^7.28.0, eslint-plugin-react@^7.29.2:
     semver "^6.3.0"
     string.prototype.matchall "^4.0.6"
 
-eslint-plugin-tihonovrv-plugin@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.npmjs.org/eslint-plugin-tihonovrv-plugin/-/eslint-plugin-tihonovrv-plugin-0.0.3.tgz"
-  integrity sha512-5yRyxyK+0tg3cHK+WCWB25ThdGQvtUoz0ygvtg7/OXhxk//YWwJLCN+Zeu6GFzUe48HujuLjlnPv1Bo6W2NBuw==
+eslint-plugin-tihonovrv-plugin@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.npmjs.org/eslint-plugin-tihonovrv-plugin/-/eslint-plugin-tihonovrv-plugin-0.0.4.tgz"
+  integrity sha512-AwgTWUADh+KGNmU9uEffdI3b6yz9coC45KrOb7DnD31Hi5cx0NEEjZz+veGTgJQTqlco5bPWju/YigXsU7X0gQ==
   dependencies:
     requireindex "^1.2.0"
 
