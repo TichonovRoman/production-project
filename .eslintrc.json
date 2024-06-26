@@ -32,7 +32,8 @@
       "alias": "@"
     }],
     "tihonovrv-plugin/public-api-imports": ["error", {
-      "alias": "@"
+      "alias": "@",
+      "testFilesPatterns": ["**/*.test.*", "**/*.story.*", "**/StoreDecorator.tsx"]
     }],
     "tihonovrv-plugin/rule-name": 2,
     "i18next/no-literal-string": ["error", {
