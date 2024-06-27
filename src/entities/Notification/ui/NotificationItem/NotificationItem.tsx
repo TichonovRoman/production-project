@@ -1,10 +1,10 @@
 import cls from "./NotificationItem.module.scss"
 import {classNames} from "@/shared/lib/classNames/classNames";
-import {Text} from "@/shared/ui/Text/Text";
+import {Text} from "@/shared/ui/Text";
 import {useTranslation} from "react-i18next";
 import {memo} from "react";
 import {Notification} from "../../model/types/notification";
-import {Card, CardTheme} from "@/shared/ui/Card/Card";
+import {Card, CardTheme} from "@/shared/ui/Card";
 
 interface NotificationItemPropsType {
     className?: string;
