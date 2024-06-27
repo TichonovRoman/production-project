@@ -31,6 +31,10 @@
     "tihonovrv-plugin/path-checker": ["error", {
       "alias": "@"
     }],
+    "tihonovrv-plugin/layer-imports": ["error", {
+      "alias": "@",
+      "ignoreImportPatterns": ["**/StoreProvider, **/testing"]
+    }],
     "tihonovrv-plugin/public-api-imports": ["error", {
       "alias": "@",
       "testFilesPatterns": ["**/*.test.*", "**/*.story.*", "**/StoreDecorator.tsx"]

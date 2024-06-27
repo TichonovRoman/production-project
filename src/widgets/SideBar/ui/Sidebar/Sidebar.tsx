@@ -1,6 +1,5 @@
 import {classNames} from "@/shared/lib/classNames/classNames";
 import {memo, useMemo, useState} from "react";
-import {ThemeSwitcher} from "@/widgets/ThemeSwitcher";
 import {Button, ButtonSize, ButtonTheme} from "@/shared/ui/Button/Button";
 import {useSelector} from "react-redux";
 import cls from "./Sidebar.module.scss";
@@ -8,6 +7,8 @@ import {VStack} from "@/shared/ui/Stack/VStack/VStack";
 import {getSidebarItems} from "@/widgets/SideBar/model/selectors/getSidebarItems";
 import {SidebarItem} from "@/widgets/SideBar/ui/SidebarItem/SidebarItem";
 import {LangSwitcher} from "@/shared/ui/LangSwitcher";
+// eslint-disable-next-line tihonovrv-plugin/layer-imports
+import {ThemeSwitcher} from "@/features/ThemeSwitcher";
 
 interface SidebarProps {
     className?: string;
