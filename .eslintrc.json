@@ -25,7 +25,8 @@
     "react-hooks",
     "@typescript-eslint",
     "i18next",
-    "tihonovrv-plugin"
+    "tihonovrv-plugin",
+    "unused-impopts"
   ],
   "rules": {
     "tihonovrv-plugin/path-checker": ["error", {
@@ -40,6 +41,7 @@
       "testFilesPatterns": ["**/*.test.*", "**/*.story.*", "**/StoreDecorator.tsx"]
     }],
     "tihonovrv-plugin/rule-name": 2,
+    "unused-imports/no-unused-imports": "error",
     "i18next/no-literal-string": ["error", {
       "markupOnly": true,
       "ignoreAttribute": [
