@@ -12,7 +12,7 @@ import {Button, ButtonTheme} from "@/shared/ui/Button";
 import {ArticleTextBlockComponent} from "../ArticleTextBlockComponent/ArticleTextBlockComponent";
 import {AppLink} from "@/shared/ui/AppLink";
 import {ArticleBlockType, ArticleView} from "@/entities/Article";
-import {RoutePath} from "@/shared/const/router";
+import {getRouteArticleDetails} from "@/shared/const/router";
 
 interface ArticleListItemPropsType {
     className?: string;
@@ -47,7 +47,7 @@ export const ArticleListItem = memo(({className, article, view, target}: Article
                 <img src={article.img} className={cls.img} alt={article.title}/>
                 {textBlock && (<ArticleTextBlockComponent block={textBlock} className={cls.textBlock}/>)}
                 <div className={cls.footer}>
-                    <AppLink to={RoutePath.article_details + article.id}>
+                    <AppLink to={getRouteArticleDetails(article.id)}>
                         <Button theme={ButtonTheme.OUTLINE}>
                             {t("Читать далее...")}
                         </Button>
@@ -61,7 +61,7 @@ export const ArticleListItem = memo(({className, article, view, target}: Article
     return (
         <AppLink
             target={target}
-            to={RoutePath.article_details + article.id}
+            to={getRouteArticleDetails(article.id)}
             className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}>
             <Card className={cls.card}>
                 <div className={cls.imageWrapper}>
