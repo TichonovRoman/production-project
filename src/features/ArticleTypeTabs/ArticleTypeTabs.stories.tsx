@@ -1,7 +1,7 @@
 import React from "react";
 import {ComponentStory, ComponentMeta} from "@storybook/react";
 
-import {ArticleTypeTabs} from "./ArticleTypeTabs";
+import {ArticleTypeTabs} from "src/features/ArticleTypeTabs/ArticleTypeTabs";
 
 export default {
     title: "entities/Article/ArticleTypeTabs",

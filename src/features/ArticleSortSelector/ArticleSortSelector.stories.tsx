@@ -1,7 +1,7 @@
 import React from "react";
 import {ComponentStory, ComponentMeta} from "@storybook/react";
 
-import {ArticleSortSelector} from "./ArticleSortSelector";
+import {ArticleSortSelector} from "src/features/ArticleSortSelector/ArticleSortSelector";
 
 export default {
     title: "entities/Article/ArticleSortSelector",
