@@ -1,6 +1,6 @@
 import {Card} from "@/shared/ui/Card";
 import {memo} from "react";
-import {ArticleView} from "../../model/consts/articleConsts";
+import {ArticleView} from "@/shared/types/consts/articleConsts";
 import {Skeleton} from "@/shared/ui/Skeleton";
 import cls from "./ArticleListItem.module.scss"
 import {classNames} from "@/shared/lib/classNames/classNames";

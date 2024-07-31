@@ -5,7 +5,7 @@ import {ArticleListItemSkeleton} from "@/entities/Article/ui/ArticleListItem/Art
 import {Text, TextSize} from "@/shared/ui/Text";
 import cls from "./ArticleList.module.scss";
 import {Article} from "../../model/types/article";
-import {ArticleView} from "../../model/consts/articleConsts";
+import {ArticleView} from "@/shared/types/consts/articleConsts";
 import {ArticleListItem} from "@/entities/Article/ui/ArticleListItem/ArticleListItem";
 
 interface ArticleListProps {

@@ -24,7 +24,7 @@ import {ArticleCodeBlockComponent} from "@/entities/Article/ui/ArticleCodeBlockC
 import {ArticleImageBlockComponent} from "@/entities/Article/ui/ArticleImageBlockComponent/ArticleImageBlockComponent";
 import {ArticleTextBlockComponent} from "@/entities/Article/ui/ArticleTextBlockComponent/ArticleTextBlockComponent";
 import {HStack, VStack} from "@/shared/ui/Stack";
-import {ArticleBlockType} from "../../model/consts/articleConsts";
+import {ArticleBlockType} from "@/shared/types/consts/articleConsts";
 
 interface ArticleDetailsPropsType {
     className?: string;

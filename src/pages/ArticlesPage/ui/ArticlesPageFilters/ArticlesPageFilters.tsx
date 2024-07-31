@@ -22,7 +22,7 @@ import {Input} from "@/shared/ui/Input";
 import {SortOrder} from "@/shared/types";
 import {fetchArticlesList} from "../../model/services/fetchArticlesList/fetchArticlesList";
 import {useDebounce} from "@/shared/lib/hooks/useDebounce/useDebounce";
-import {ArticleType} from "@/entities/Article/model/consts/articleConsts";
+import {ArticleType} from "@/shared/types/consts/articleConsts";
 
 interface ArticlesPageFiltersPropsType {
     className?: string

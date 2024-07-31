@@ -8,4 +8,4 @@ export {ArticleViewSelector} from "@/features/ArticleViewSelector/ArticleViewSel
 export {ArticleSortSelector} from "@/features/ArticleSortSelector/ArticleSortSelector"
 export {ArticleTypeTabs} from "@/features/ArticleTypeTabs/ArticleTypeTabs"
 export {getArticleDetailsData} from "./model/selectors/articleDetails"
-export {ArticleView, ArticleType, ArticleSortField, ArticleBlockType} from "@/entities/Article/model/consts/articleConsts";
+export {ArticleView, ArticleType, ArticleSortField, ArticleBlockType} from "@/shared/types/consts/articleConsts";

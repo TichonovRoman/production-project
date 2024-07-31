@@ -1,7 +1,7 @@
 import {TestAsyncThunk} from "../../../../../shared/lib/tests/TestAsyncThunk/TestAsyncThunk";
 import {fetchNextArticlesPage} from "./fetchNextArticlesPage";
 import {fetchArticlesList} from "../fetchArticlesList/fetchArticlesList";
-import {ArticleSortField, ArticleType} from "@/entities/Article/model/consts/articleConsts";
+import {ArticleSortField, ArticleType} from "@/shared/types/consts/articleConsts";
 
 // мокаем функцию которая вызовется внутри санки, чтобы напряму/ здесь проверить ее вызов
 jest.mock("../fetchArticlesList/fetchArticlesList")

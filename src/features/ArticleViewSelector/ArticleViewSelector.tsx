@@ -1,11 +1,11 @@
-import cls from "src/features/ArticleViewSelector/ArticleViewSelector.module.scss"
+import cls from "./ArticleViewSelector.module.scss"
 import {classNames} from "@/shared/lib/classNames/classNames";
 import {memo} from "react";
 import ListIcon from "@/shared/assets/icons/BigList.svg"
 import TiledIcon from "@/shared/assets/icons/SmallList.svg"
 import {Button, ButtonTheme} from "@/shared/ui/Button";
 import {Icon} from "@/shared/ui/Icon";
-import {ArticleView} from "src/entities/Article/model/consts/articleConsts";
+import {ArticleView} from "@/shared/types/consts/articleConsts";
 
 interface ArticleViewSelectorPropsType {
     className?: string;
