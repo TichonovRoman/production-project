@@ -1,7 +1,9 @@
 .Icon {
-  stroke: var(--primary-color)
+  stroke: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .inverted {
-  stroke: var(--inverted-primary-color)
+  stroke: var(--inverted-primary-color);
+  color: var(--inverted-primary-color)
 }
