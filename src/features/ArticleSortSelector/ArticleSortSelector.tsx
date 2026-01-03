@@ -3,7 +3,7 @@ import {classNames} from "@/shared/lib/classNames/classNames";
 import {useTranslation} from "react-i18next";
 import {memo, useMemo} from "react";
 import {Select, SelectOption} from "@/shared/ui/Select";
-import {SortOrder} from "@/shared/types";
+import {SortOrder} from "@/shared/types/sort";
 import {ArticleSortField} from "@/shared/types/consts/articleConsts";
 
 interface ArticleSortSelectorPropsType {
