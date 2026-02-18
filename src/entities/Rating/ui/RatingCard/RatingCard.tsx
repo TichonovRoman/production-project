@@ -53,7 +53,12 @@ export const RatingCard = memo((props: RatingCardProps) => {
     const modalContent = (
         <>
             <Text title={feedbackTitle}/>
-            <Input data-testid='RatingCard.Input' value={feedback} onChange={setFeedback} placeholder={t('Ваш отзыв')}/>
+            <Input
+                data-testid='RatingCard.Input'
+                value={feedback}
+                onChange={setFeedback}
+                placeholder={t('Ваш отзыв')}
+            />
         </>
     )
 
