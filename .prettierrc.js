@@ -7,4 +7,5 @@ module.exports = {
   semi: false,
   importOrder: ['^@/(.*)$', '^[./]', '^[./style(.*)]'],
   importOrderSeparation: true,
+  bracketSpacing: true,
 }

@@ -1,15 +1,11 @@
-import React from "react";
-import {useTranslation} from "react-i18next";
-import {Page} from "@/widgets/Page";
+import React from 'react'
+import { useTranslation } from 'react-i18next'
+import { Page } from '@/widgets/Page'
 
 const AdminPanelPageNotAsync = () => {
-    const {t} = useTranslation("about");
+  const { t } = useTranslation('about')
 
-    return (
-        <Page data-teatid={'AdminPanelPage'}>
-            {t("Админ панель")}
-        </Page>
-    );
-};
+  return <Page data-teatid={'AdminPanelPage'}>{t('Админ панель')}</Page>
+}
 
-export default AdminPanelPageNotAsync;
+export default AdminPanelPageNotAsync

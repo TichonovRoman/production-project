@@ -5,14 +5,14 @@ export default defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-    baseUrl: 'http://localhost:3000' // можно сюда передавать через env, порты тестовых стендов, ci/cd
+    baseUrl: 'http://localhost:3000', // можно сюда передавать через env, порты тестовых стендов, ci/cd
   },
 
-  "component": {
-    "supportFile": false,
-    "devServer": {
-      "framework": "react",
-      "bundler": "webpack",
-    }
-  }
+  component: {
+    supportFile: false,
+    devServer: {
+      framework: 'react',
+      bundler: 'webpack',
+    },
+  },
 })

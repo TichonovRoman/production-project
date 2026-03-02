@@ -29,34 +29,50 @@
     "unused-impopts"
   ],
   "rules": {
-    "tihonovrv-plugin/path-checker": ["error", {
-      "alias": "@"
-    }],
-    "tihonovrv-plugin/layer-imports": ["error", {
-      "alias": "@",
-      "ignoreImportPatterns": ["**/StoreProvider, **/testing"]
-    }],
-    "tihonovrv-plugin/public-api-imports": ["error", {
-      "alias": "@",
-      "testFilesPatterns": ["**/*.test.*", "**/*.story.*", "**/StoreDecorator.tsx"]
-    }],
+    "tihonovrv-plugin/path-checker": [
+      "error",
+      {
+        "alias": "@"
+      }
+    ],
+    "tihonovrv-plugin/layer-imports": [
+      "error",
+      {
+        "alias": "@",
+        "ignoreImportPatterns": ["**/StoreProvider, **/testing"]
+      }
+    ],
+    "tihonovrv-plugin/public-api-imports": [
+      "error",
+      {
+        "alias": "@",
+        "testFilesPatterns": [
+          "**/*.test.*",
+          "**/*.story.*",
+          "**/StoreDecorator.tsx"
+        ]
+      }
+    ],
     "tihonovrv-plugin/rule-name": 2,
     "unused-imports/no-unused-imports": "error",
-    "i18next/no-literal-string": ["error", {
-      "markupOnly": true,
-      "ignoreAttribute": [
-        "data-testid",
-        "to",
-        "target",
-        "justify",
-        "align",
-        "border",
-        "direction",
-        "gap",
-        "role",
-        "as"
-      ]
-    }],
+    "i18next/no-literal-string": [
+      "error",
+      {
+        "markupOnly": true,
+        "ignoreAttribute": [
+          "data-testid",
+          "to",
+          "target",
+          "justify",
+          "align",
+          "border",
+          "direction",
+          "gap",
+          "role",
+          "as"
+        ]
+      }
+    ],
     "indent": "off",
     "radix": 0,
     "react/no-array-index-key": "warn",
@@ -75,13 +91,9 @@
         "max": 1
       }
     ],
-    "@typescript-eslint/no-shadow": [
-      "off"
-    ],
+    "@typescript-eslint/no-shadow": ["off"],
     "@typescript-eslint/camelcase": "off",
-    "@typescript-eslint/no-unused-vars": [
-      "off"
-    ],
+    "@typescript-eslint/no-unused-vars": ["off"],
     "@typescript-eslint/no-magic-numbers": [
       "off",
       {
@@ -89,9 +101,7 @@
         "ignoreNumericLiteralTypes": true
       }
     ],
-    "@typescript-eslint/no-use-before-define": [
-      "error"
-    ],
+    "@typescript-eslint/no-use-before-define": ["error"],
     "react/require-default-props": "off",
     "jsx-a11y/no-static-element-interactions": "off",
     "prettier/prettier": "error",
@@ -108,9 +118,7 @@
     "jsx-a11y/no-noninteractive-element-interactions": [
       "warn",
       {
-        "handlers": [
-           "onKeyUp"
-        ]
+        "handlers": ["onKeyUp"]
       }
     ],
     "react/destructuring-assignment": "error",
@@ -118,10 +126,7 @@
     "react/jsx-filename-extension": [
       1,
       {
-        "extensions": [
-          ".jsx",
-          ".tsx"
-        ]
+        "extensions": [".jsx", ".tsx"]
       }
     ],
     "react/function-component-definition": [
@@ -139,21 +144,13 @@
     "import/order": [
       "error",
       {
-//        "newlines-between": "always",
-        "pathGroupsExcludedImportTypes": [
-          "react"
-        ],
+        //        "newlines-between": "always",
+        "pathGroupsExcludedImportTypes": ["react"],
         "alphabetize": {
           "order": "asc",
           "caseInsensitive": true
         },
-        "groups": [
-          "builtin",
-          "external",
-          "parent",
-          "sibling",
-          "index"
-        ],
+        "groups": ["builtin", "external", "parent", "sibling", "index"],
         "pathGroups": [
           {
             "pattern": "react",
@@ -181,24 +178,19 @@
     "__API__": true,
     "__PROJECT__": true
   },
-  "overrides": [{
-    "files": ["**/src/**/*.test.{ts,tsx}"],
-    "rules": {
-      "i18next/no-literal-string": "off"
+  "overrides": [
+    {
+      "files": ["**/src/**/*.test.{ts,tsx}"],
+      "rules": {
+        "i18next/no-literal-string": "off"
+      }
     }
-  }],
+  ],
   "settings": {
     "import/resolver": {
       "node": {
-        "paths": [
-          "src"
-        ],
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx"
-        ]
+        "paths": ["src"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     }
   }
