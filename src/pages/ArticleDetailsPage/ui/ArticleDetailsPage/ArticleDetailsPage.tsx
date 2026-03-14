@@ -16,6 +16,8 @@ import { VStack } from '@/shared/ui/Stack'
 import { ArticleRecommendationsList } from '@/features/articleRecommendationsList'
 import { ArticleDetailsComments } from '@/pages/ArticleDetailsPage/ui/ArticleDetailsComments/ArticleDetailsComments'
 import { ArticleRating } from '@/features/articleRating'
+import { getFeatureFlag } from '@/shared/lib/features'
+import { Counter } from '@/entities/Counter'
 
 interface ArticleDetailsPagePropsType {
   className?: string
@@ -29,6 +31,9 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPagePropsType) => {
   const { t } = useTranslation('article-details')
   const { id } = useParams<{ id: string }>()
 
+  const isArticleRatingEnabled = getFeatureFlag('isArticleRatingEnabled')
+  const isCounterEnabled = getFeatureFlag('isCounterEnabled')
+
   if (!id) {
     return null
   }
@@ -39,7 +44,8 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPagePropsType) => {
         <VStack gap={'16'} max>
           <ArticleDetailsPageHeader />
           <ArticleDetails id={id} />
-          <ArticleRating articleId={id} />
+          {isArticleRatingEnabled && <ArticleRating articleId={id} />}
+          {isCounterEnabled && <Counter />}
           <ArticleRecommendationsList />
           <ArticleDetailsComments id={id} />
         </VStack>
